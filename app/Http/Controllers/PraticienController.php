@@ -8,6 +8,6 @@ use App\Models\Praticien;
 class PraticienController extends Controller
 {
     public function liste(){
-        return view("viewpraticien", ["prat" => Praticien::all()]);
+        return view("praticienList", ["prat" => Praticien::all()]);
     }
 }
