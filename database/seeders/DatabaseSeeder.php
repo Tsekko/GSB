@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SpecialiteSeeder::class);
         $this->call(TravaillerSeeder::class);
         $this->call(TypePraticienSeeder::class);
-        $this->call(VisiteurSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
