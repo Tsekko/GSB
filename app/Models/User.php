@@ -18,6 +18,15 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'id',
+        'VIS_MATRICULE',
+        'VIS_NOM',
+        'VIS_PRENOM',
+        'VIS_ADRESSE',
+        'VIS_CP',
+        'VIS_VILLE',
+        'VIS_DATEEMBAUCHE',
+        'SEC_CODE',
+        'LAB_CODE',
         'email',
         'password',
     ];
