@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <title>@yield('title')</title>
 </head>
 <body>
@@ -47,14 +49,12 @@
             @if (Route::has('login'))
                 <div class="flex space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+                    <!-- Lien vers la page d'accueil -->
+                    <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                     @auth
+                    <!-- Lien vers la page Praticiens -->
                     <a href="/praticien" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Praticiens</a>
-
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
-
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
                     @else
                     <p class="text-white">Non connecté</p>
                     @endauth
@@ -89,7 +89,6 @@
                     <!-- Active: "bg-gray-100", Not Active: "" -->
                     @auth
                     <a href="/profile" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
@@ -102,7 +101,6 @@
                     @else
                     <!--<a href="/logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>-->
                     <a href="/login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="guest-menu-item-0">Se connecter</a>
-                    <a href="/register" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="guest-menu-item-1">S'enregistrer</a>
                     @endauth
                 </div>
             @endif

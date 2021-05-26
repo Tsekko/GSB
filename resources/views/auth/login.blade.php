@@ -19,7 +19,7 @@
             <div>
                 <x-label for="id" :value="__('id')" />
 
-                <x-input id="id" class="block mt-1 w-full" type="id" name="id" :value="old('id')" required autofocus />
+                <x-input id="id" class="block mt-1 w-full" type="text" name="id" :value="old('id')" required autofocus />
             </div>
 
             <!-- Password -->

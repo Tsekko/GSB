@@ -15,8 +15,8 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('accueil');
+Route::get('/', function(){
+    return view("accueil");
 });
 
 Route::get('/praticien', [PraticienController::class, 'liste']);
@@ -26,5 +26,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/profile', [UserController::class, 'getProfile']);
+
+
 
 require __DIR__.'/auth.php';

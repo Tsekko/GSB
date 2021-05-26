@@ -3802,6 +3802,18 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
+$(document).ready(function () {
+  $('#practicien_select').change(function () {
+    var selecteur = '#info_pract_' + $(this).val();
+    update_view(selecteur);
+  });
+});
+
+function update_view(id_practi) {
+  $('.practicien_infos').hide();
+  $(id_practi).show();
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
