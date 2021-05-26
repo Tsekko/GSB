@@ -15,9 +15,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function(){
+/*Route::get('/', function(){
     return view("accueil");
-});
+});*/
 
 Route::get('/praticien', [PraticienController::class, 'liste']);
 
@@ -27,6 +27,10 @@ Route::get('/dashboard', function () {
 
 Route::get('/profile', [UserController::class, 'getProfile']);
 
+Route::get('/', [UserController::class, 'getHome'])->middleware(['auth']);
 
+Route::get('/accueil', function(){
+    return view('accueil');
+});
 
 require __DIR__.'/auth.php';

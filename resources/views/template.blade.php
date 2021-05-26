@@ -51,11 +51,13 @@
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
                     <!-- Lien vers la page d'accueil -->
-                    <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+                    
                     @auth
+                    <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                     <!-- Lien vers la page Praticiens -->
                     <a href="/praticien" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Praticiens</a>
                     @else
+                    <a href="/accueil" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                     <p class="text-white">Non connecté</p>
                     @endauth
                 </div>
